@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+
+    <changeSet author="abratu" id="tbl_role" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <not> <tableExists tableName="role" /> </not>
+        </preConditions>
+        <createTable tableName="role">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="role_name" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="active" type="int(1)" defaultValue="NULL"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="abratu" id="uk_role_1" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <not> <indexExists indexName="uk_role_1" /> </not>
+        </preConditions>
+        <addUniqueConstraint
+                constraintName="uk_role_1"
+                tableName="role"
+                columnNames="role_name"/>
+    </changeSet>
+
+    <changeSet id="insert_admin_role" author="abratu">
+        <insert tableName="role">
+            <column name="role_name" value="admin"/>
+            <column name="active" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert_user_role" author="abratu">
+        <insert tableName="role">
+            <column name="role_name" value="user"/>
+            <column name="active" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

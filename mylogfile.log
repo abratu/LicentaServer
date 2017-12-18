@@ -1,0 +1,617 @@
+2017-12-18 20:23:26.053  INFO 4634 --- [restartedMain] com.abratu.Main                          : Starting Main on 192-168-0-101.rdsnet.ro with PID 4634 (/Users/pethoalpar/Documents/work/java/LicentaServer/target/classes started by pethoalpar in /Users/pethoalpar/Documents/work/java/LicentaServer)
+2017-12-18 20:23:26.056  INFO 4634 --- [restartedMain] com.abratu.Main                          : No active profile set, falling back to default profiles: default
+2017-12-18 20:23:26.647  INFO 4634 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7a0e8151: startup date [Mon Dec 18 20:23:26 EET 2017]; root of context hierarchy
+2017-12-18 20:23:29.560  INFO 4634 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-18 20:23:29.578  INFO 4634 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-18 20:23:29.579  INFO 4634 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-12-18 20:23:29.713  INFO 4634 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-18 20:23:29.714  INFO 4634 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3071 ms
+2017-12-18 20:23:29.964  INFO 4634 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-18 20:23:29.965  INFO 4634 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-18 20:23:29.965  INFO 4634 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-18 20:23:29.965  INFO 4634 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-18 20:23:29.966  INFO 4634 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-12-18 20:23:29.966  INFO 4634 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-18 20:23:30.432  WARN 4634 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration$LiquibaseConfiguration': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Cannot find changelog location: class path resource [db/changelog/db.changelog-master.yaml] (please add changelog or check your Liquibase configuration)
+2017-12-18 20:23:30.434  INFO 4634 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2017-12-18 20:23:30.465  INFO 4634 --- [restartedMain] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-12-18 20:23:30.474 ERROR 4634 --- [restartedMain] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration$LiquibaseConfiguration': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Cannot find changelog location: class path resource [db/changelog/db.changelog-master.yaml] (please add changelog or check your Liquibase configuration)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:137) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:296) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1078) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at com.abratu.Main.main(Main.java:18) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+Caused by: java.lang.IllegalStateException: Cannot find changelog location: class path resource [db/changelog/db.changelog-master.yaml] (please add changelog or check your Liquibase configuration)
+	at org.springframework.util.Assert.state(Assert.java:70) ~[spring-core-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration$LiquibaseConfiguration.checkChangelogExists(LiquibaseAutoConfiguration.java:96) ~[spring-boot-autoconfigure-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:366) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:311) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:134) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	... 34 common frames omitted
+
+2017-12-18 20:25:08.274  INFO 4642 --- [restartedMain] com.abratu.Main                          : Starting Main on 192-168-0-101.rdsnet.ro with PID 4642 (/Users/pethoalpar/Documents/work/java/LicentaServer/target/classes started by pethoalpar in /Users/pethoalpar/Documents/work/java/LicentaServer)
+2017-12-18 20:25:08.277  INFO 4642 --- [restartedMain] com.abratu.Main                          : No active profile set, falling back to default profiles: default
+2017-12-18 20:25:08.770  INFO 4642 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7c5b63d5: startup date [Mon Dec 18 20:25:08 EET 2017]; root of context hierarchy
+2017-12-18 20:25:11.435  INFO 4642 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-18 20:25:11.454  INFO 4642 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-18 20:25:11.456  INFO 4642 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-12-18 20:25:11.594  INFO 4642 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-18 20:25:11.594  INFO 4642 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2828 ms
+2017-12-18 20:25:11.911  INFO 4642 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-18 20:25:11.913  INFO 4642 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-18 20:25:11.914  INFO 4642 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-18 20:25:11.914  INFO 4642 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-18 20:25:11.916  INFO 4642 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-12-18 20:25:11.916  INFO 4642 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-18 20:25:16.961 ERROR 4642 --- [restartedMain] o.a.tomcat.jdbc.pool.ConnectionPool      : Unable to create initial connections of pool.
+
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_121]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_121]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.Util.getInstance(Util.java:408) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:918) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:897) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:886) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2104) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2029) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_121]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_121]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:310) ~[tomcat-jdbc-8.5.16.jar:na]
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203) ~[tomcat-jdbc-8.5.16.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:735) [tomcat-jdbc-8.5.16.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:667) [tomcat-jdbc-8.5.16.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:482) [tomcat-jdbc-8.5.16.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154) [tomcat-jdbc-8.5.16.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118) [tomcat-jdbc-8.5.16.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107) [tomcat-jdbc-8.5.16.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131) [tomcat-jdbc-8.5.16.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:385) [liquibase-core-3.5.3.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:296) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1078) [spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857) [spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) [spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at com.abratu.Main.main(Main.java:18) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'licenta'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_121]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_121]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.Util.getInstance(Util.java:408) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2198) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2045) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	... 45 common frames omitted
+
+2017-12-18 20:25:16.964  WARN 4642 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.DatabaseException: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+2017-12-18 20:25:16.967  INFO 4642 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2017-12-18 20:25:16.984  INFO 4642 --- [restartedMain] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-12-18 20:25:16.988 ERROR 4642 --- [restartedMain] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.DatabaseException: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:296) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1078) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at com.abratu.Main.main(Main.java:18) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+Caused by: liquibase.exception.DatabaseException: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:390) ~[liquibase-core-3.5.3.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	... 23 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_121]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_121]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.Util.getInstance(Util.java:408) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:918) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:897) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:886) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2104) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2029) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_121]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_121]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:310) ~[tomcat-jdbc-8.5.16.jar:na]
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203) ~[tomcat-jdbc-8.5.16.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:735) ~[tomcat-jdbc-8.5.16.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:667) ~[tomcat-jdbc-8.5.16.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:482) ~[tomcat-jdbc-8.5.16.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154) ~[tomcat-jdbc-8.5.16.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118) ~[tomcat-jdbc-8.5.16.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107) ~[tomcat-jdbc-8.5.16.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131) ~[tomcat-jdbc-8.5.16.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:385) ~[liquibase-core-3.5.3.jar:na]
+	... 25 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'licenta'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_121]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_121]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.Util.getInstance(Util.java:408) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2198) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2045) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	... 45 common frames omitted
+
+2017-12-18 20:26:11.620  INFO 4647 --- [restartedMain] com.abratu.Main                          : Starting Main on 192-168-0-101.rdsnet.ro with PID 4647 (/Users/pethoalpar/Documents/work/java/LicentaServer/target/classes started by pethoalpar in /Users/pethoalpar/Documents/work/java/LicentaServer)
+2017-12-18 20:26:11.622  INFO 4647 --- [restartedMain] com.abratu.Main                          : No active profile set, falling back to default profiles: default
+2017-12-18 20:26:12.226  INFO 4647 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7a0e8151: startup date [Mon Dec 18 20:26:12 EET 2017]; root of context hierarchy
+2017-12-18 20:26:14.916  INFO 4647 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-18 20:26:14.929  INFO 4647 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-18 20:26:14.931  INFO 4647 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-12-18 20:26:15.056  INFO 4647 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-18 20:26:15.056  INFO 4647 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2833 ms
+2017-12-18 20:26:15.294  INFO 4647 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-18 20:26:15.295  INFO 4647 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-18 20:26:15.296  INFO 4647 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-18 20:26:15.296  INFO 4647 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-18 20:26:15.297  INFO 4647 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-12-18 20:26:15.297  INFO 4647 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-18 20:26:16.473  INFO 4647 --- [restartedMain] liquibase                                : Successfully acquired change log lock
+2017-12-18 20:26:17.517  INFO 4647 --- [restartedMain] liquibase                                : Successfully released change log lock
+2017-12-18 20:26:17.522  WARN 4647 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: Error Reading Migration File: class path resource [db/db.changelog/create_role.xml] cannot be resolved to URL because it does not exist
+2017-12-18 20:26:17.529  INFO 4647 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2017-12-18 20:26:17.554  INFO 4647 --- [restartedMain] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-12-18 20:26:17.570 ERROR 4647 --- [restartedMain] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: Error Reading Migration File: class path resource [db/db.changelog/create_role.xml] cannot be resolved to URL because it does not exist
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:296) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1078) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at com.abratu.Main.main(Main.java:18) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+Caused by: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: Error Reading Migration File: class path resource [db/db.changelog/create_role.xml] cannot be resolved to URL because it does not exist
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:27) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.Liquibase.getDatabaseChangeLog(Liquibase.java:229) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:202) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:192) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:431) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:388) ~[liquibase-core-3.5.3.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	... 23 common frames omitted
+Caused by: liquibase.exception.SetupException: Error Reading Migration File: class path resource [db/db.changelog/create_role.xml] cannot be resolved to URL because it does not exist
+	at liquibase.changelog.DatabaseChangeLog.handleChildNode(DatabaseChangeLog.java:322) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.changelog.DatabaseChangeLog.load(DatabaseChangeLog.java:282) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:25) ~[liquibase-core-3.5.3.jar:na]
+	... 30 common frames omitted
+Caused by: liquibase.exception.ChangeLogParseException: Error Reading Migration File: class path resource [db/db.changelog/create_role.xml] cannot be resolved to URL because it does not exist
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:112) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:17) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:478) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.changelog.DatabaseChangeLog.handleChildNode(DatabaseChangeLog.java:320) ~[liquibase-core-3.5.3.jar:na]
+	... 32 common frames omitted
+Caused by: java.io.FileNotFoundException: class path resource [db/db.changelog/create_role.xml] cannot be resolved to URL because it does not exist
+	at org.springframework.core.io.ClassPathResource.getURL(ClassPathResource.java:187) ~[spring-core-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at liquibase.integration.spring.SpringLiquibase$SpringResourceOpener.getResourcesAsStream(SpringLiquibase.java:161) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.util.StreamUtil.singleInputStream(StreamUtil.java:186) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:93) ~[liquibase-core-3.5.3.jar:na]
+	... 35 common frames omitted
+
+2017-12-18 20:27:07.721  INFO 4650 --- [restartedMain] com.abratu.Main                          : Starting Main on 192-168-0-101.rdsnet.ro with PID 4650 (/Users/pethoalpar/Documents/work/java/LicentaServer/target/classes started by pethoalpar in /Users/pethoalpar/Documents/work/java/LicentaServer)
+2017-12-18 20:27:07.734  INFO 4650 --- [restartedMain] com.abratu.Main                          : No active profile set, falling back to default profiles: default
+2017-12-18 20:27:08.357  INFO 4650 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38dfe11b: startup date [Mon Dec 18 20:27:08 EET 2017]; root of context hierarchy
+2017-12-18 20:27:11.411  INFO 4650 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-18 20:27:11.433  INFO 4650 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-18 20:27:11.434  INFO 4650 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-12-18 20:27:11.578  INFO 4650 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-18 20:27:11.578  INFO 4650 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3225 ms
+2017-12-18 20:27:11.915  INFO 4650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-18 20:27:11.916  INFO 4650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-18 20:27:11.916  INFO 4650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-18 20:27:11.916  INFO 4650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-18 20:27:11.918  INFO 4650 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-12-18 20:27:11.919  INFO 4650 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-18 20:27:13.061  INFO 4650 --- [restartedMain] liquibase                                : Successfully acquired change log lock
+2017-12-18 20:27:14.028  INFO 4650 --- [restartedMain] liquibase                                : Creating database history table with name: licenta.DATABASECHANGELOG
+2017-12-18 20:27:14.057  INFO 4650 --- [restartedMain] liquibase                                : Reading from licenta.DATABASECHANGELOG
+2017-12-18 20:27:14.111  INFO 4650 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::tbl_role::abratu: Table role created
+2017-12-18 20:27:14.112  INFO 4650 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::tbl_role::abratu: ChangeSet /db/changelog/create_role.xml::tbl_role::abratu ran successfully in 36ms
+2017-12-18 20:27:14.153  INFO 4650 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::uk_role_1::abratu: Unique constraint added to role(role_name)
+2017-12-18 20:27:14.154  INFO 4650 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::uk_role_1::abratu: ChangeSet /db/changelog/create_role.xml::uk_role_1::abratu ran successfully in 35ms
+2017-12-18 20:27:14.161  INFO 4650 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::insert_admin_role::abratu: New row inserted into role
+2017-12-18 20:27:14.162  INFO 4650 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::insert_admin_role::abratu: ChangeSet /db/changelog/create_role.xml::insert_admin_role::abratu ran successfully in 4ms
+2017-12-18 20:27:14.167  INFO 4650 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::insert_user_role::abratu: New row inserted into role
+2017-12-18 20:27:14.168  INFO 4650 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::insert_user_role::abratu: ChangeSet /db/changelog/create_role.xml::insert_user_role::abratu ran successfully in 3ms
+2017-12-18 20:27:14.213  INFO 4650 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_user.xml::tbl_user::pethoalpar: Table user created
+2017-12-18 20:27:14.214  INFO 4650 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_user.xml::tbl_user::pethoalpar: ChangeSet /db/changelog/create_user.xml::tbl_user::pethoalpar ran successfully in 41ms
+2017-12-18 20:27:14.244  INFO 4650 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_user.xml::uk_user_1::pethoalpar: Unique constraint added to user(user_name)
+2017-12-18 20:27:14.244  INFO 4650 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_user.xml::uk_user_1::pethoalpar: ChangeSet /db/changelog/create_user.xml::uk_user_1::pethoalpar ran successfully in 26ms
+2017-12-18 20:27:14.304  INFO 4650 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_user.xml::fk_user_1::pethoalpar: Foreign key constraint added to user (role_id)
+2017-12-18 20:27:14.305  INFO 4650 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_user.xml::fk_user_1::pethoalpar: ChangeSet /db/changelog/create_user.xml::fk_user_1::pethoalpar ran successfully in 53ms
+2017-12-18 20:27:14.317  INFO 4650 --- [restartedMain] liquibase                                : Successfully released change log lock
+2017-12-18 20:27:14.543  INFO 4650 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-18 20:27:16.141  INFO 4650 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-18 20:27:17.328  INFO 4650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38dfe11b: startup date [Mon Dec 18 20:27:08 EET 2017]; root of context hierarchy
+2017-12-18 20:27:17.509  INFO 4650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-18 20:27:17.510  INFO 4650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-18 20:27:17.559  INFO 4650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-18 20:27:17.560  INFO 4650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-18 20:27:17.613  INFO 4650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-18 20:27:17.668  WARN 4650 --- [restartedMain] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-12-18 20:27:18.568  INFO 4650 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2017-12-18 20:27:18.664  INFO 4650 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44b990b8, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f4aa330, org.springframework.security.web.header.HeaderWriterFilter@2a08db1d, org.springframework.security.web.authentication.logout.LogoutFilter@6eac0e93, com.abratu.security.JWTLoginFilter@2b2a71bb, com.abratu.security.JWTAuthenticationFilter@72be4fcb, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6f101d81, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@502564d3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7447e9df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60eb7796, org.springframework.security.web.session.SessionManagementFilter@710aa8d6, org.springframework.security.web.access.ExceptionTranslationFilter@638cf81b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e752364]
+2017-12-18 20:27:18.669  INFO 4650 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38ea47a, org.springframework.security.web.context.SecurityContextPersistenceFilter@41de2e74, org.springframework.security.web.header.HeaderWriterFilter@e87cf19, org.springframework.security.web.authentication.logout.LogoutFilter@9c5265e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@39d8049c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66e80417, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5627f0d4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1599490, org.springframework.security.web.session.SessionManagementFilter@7f74192f, org.springframework.security.web.access.ExceptionTranslationFilter@744a6b6b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2facb884]
+2017-12-18 20:27:19.203  WARN 4650 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2017-12-18 20:27:19.282  INFO 4650 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-18 20:27:19.384  INFO 4650 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-18 20:27:19.393  INFO 4650 --- [restartedMain] com.abratu.Main                          : Started Main in 13.517 seconds (JVM running for 14.448)
+2017-12-18 20:40:25.712  INFO 4650 --- [Thread-1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38dfe11b: startup date [Mon Dec 18 20:27:08 EET 2017]; root of context hierarchy
+2017-12-18 20:40:25.726  INFO 4650 --- [Thread-1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-12-18 20:40:25.728  INFO 4650 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-12-18 20:40:26.441  INFO 4650 --- [restartedMain] com.abratu.Main                          : Starting Main on 192-168-0-101.rdsnet.ro with PID 4650 (/Users/pethoalpar/Documents/work/java/LicentaServer/target/classes started by pethoalpar in /Users/pethoalpar/Documents/work/java/LicentaServer)
+2017-12-18 20:40:26.442  INFO 4650 --- [restartedMain] com.abratu.Main                          : No active profile set, falling back to default profiles: default
+2017-12-18 20:40:26.450  INFO 4650 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e2c5ed5: startup date [Mon Dec 18 20:40:26 EET 2017]; root of context hierarchy
+2017-12-18 20:40:27.426  INFO 4650 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-18 20:40:27.428  INFO 4650 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-18 20:40:27.429  INFO 4650 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-12-18 20:40:27.453  INFO 4650 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-18 20:40:27.455  INFO 4650 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1005 ms
+2017-12-18 20:40:27.525  INFO 4650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-18 20:40:27.526  INFO 4650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-18 20:40:27.526  INFO 4650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-18 20:40:27.526  INFO 4650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-18 20:40:27.526  INFO 4650 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-12-18 20:40:27.527  INFO 4650 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-18 20:40:28.020  INFO 4650 --- [restartedMain] liquibase                                : Successfully acquired change log lock
+2017-12-18 20:40:28.172  INFO 4650 --- [restartedMain] liquibase                                : Reading from licenta.DATABASECHANGELOG
+2017-12-18 20:40:28.228  INFO 4650 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_product.xml::tbl_produs::abratu: Table product created
+2017-12-18 20:40:28.229  INFO 4650 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_product.xml::tbl_produs::abratu: ChangeSet /db/changelog/create_product.xml::tbl_produs::abratu ran successfully in 36ms
+2017-12-18 20:40:28.270  INFO 4650 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_product.xml::uk_code::pethoalpar: Unique constraint added to product(code)
+2017-12-18 20:40:28.270  INFO 4650 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_product.xml::uk_code::pethoalpar: ChangeSet /db/changelog/create_product.xml::uk_code::pethoalpar ran successfully in 36ms
+2017-12-18 20:40:28.276  INFO 4650 --- [restartedMain] liquibase                                : Successfully released change log lock
+2017-12-18 20:40:28.307  INFO 4650 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-18 20:40:28.381  INFO 4650 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-18 20:40:28.640  INFO 4650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e2c5ed5: startup date [Mon Dec 18 20:40:26 EET 2017]; root of context hierarchy
+2017-12-18 20:40:28.655  INFO 4650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-18 20:40:28.656  INFO 4650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-18 20:40:28.671  INFO 4650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-18 20:40:28.672  INFO 4650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-18 20:40:28.692  INFO 4650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-18 20:40:28.710  WARN 4650 --- [restartedMain] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-12-18 20:40:28.787  INFO 4650 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2017-12-18 20:40:28.798  INFO 4650 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a831907, org.springframework.security.web.context.SecurityContextPersistenceFilter@4540b122, org.springframework.security.web.header.HeaderWriterFilter@1439f908, org.springframework.security.web.authentication.logout.LogoutFilter@72baf3ad, com.abratu.security.JWTLoginFilter@4255a4fc, com.abratu.security.JWTAuthenticationFilter@113e1e3f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@647b3de6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1dd0700e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46fa3b05, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c1795f3, org.springframework.security.web.session.SessionManagementFilter@25923cd3, org.springframework.security.web.access.ExceptionTranslationFilter@79842985, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@13280213]
+2017-12-18 20:40:28.801  INFO 4650 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@750fdc1f, org.springframework.security.web.context.SecurityContextPersistenceFilter@14654635, org.springframework.security.web.header.HeaderWriterFilter@357746e, org.springframework.security.web.authentication.logout.LogoutFilter@12c5bf67, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2caf07e4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6625bc06, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e6940a8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fb1d59a, org.springframework.security.web.session.SessionManagementFilter@69c4b486, org.springframework.security.web.access.ExceptionTranslationFilter@79216275, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@181c2274]
+2017-12-18 20:40:28.848  WARN 4650 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2017-12-18 20:40:28.941  INFO 4650 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-18 20:40:28.966  INFO 4650 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-18 20:40:28.971  INFO 4650 --- [restartedMain] com.abratu.Main                          : Started Main in 2.703 seconds (JVM running for 804.0)
+2017-12-18 20:45:54.232  INFO 4650 --- [Thread-15] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e2c5ed5: startup date [Mon Dec 18 20:40:26 EET 2017]; root of context hierarchy
+2017-12-18 20:45:54.236  INFO 4650 --- [Thread-15] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-12-18 20:45:54.237  INFO 4650 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-12-18 20:51:22.610  INFO 4722 --- [restartedMain] com.abratu.Main                          : Starting Main on 192-168-0-101.rdsnet.ro with PID 4722 (/Users/pethoalpar/Documents/work/java/LicentaServer/target/classes started by pethoalpar in /Users/pethoalpar/Documents/work/java/LicentaServer)
+2017-12-18 20:51:22.612  INFO 4722 --- [restartedMain] com.abratu.Main                          : No active profile set, falling back to default profiles: default
+2017-12-18 20:51:23.123  INFO 4722 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21d62a87: startup date [Mon Dec 18 20:51:23 EET 2017]; root of context hierarchy
+2017-12-18 20:51:25.744  INFO 4722 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-18 20:51:25.758  INFO 4722 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-18 20:51:25.763  INFO 4722 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-12-18 20:51:25.893  INFO 4722 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-18 20:51:25.893  INFO 4722 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2774 ms
+2017-12-18 20:51:26.120  INFO 4722 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-18 20:51:26.121  INFO 4722 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-18 20:51:26.122  INFO 4722 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-18 20:51:26.122  INFO 4722 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-18 20:51:26.124  INFO 4722 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-12-18 20:51:26.124  INFO 4722 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-18 20:51:27.225  INFO 4722 --- [restartedMain] liquibase                                : Successfully acquired change log lock
+2017-12-18 20:51:28.209  INFO 4722 --- [restartedMain] liquibase                                : Creating database history table with name: licenta.DATABASECHANGELOG
+2017-12-18 20:51:28.230  INFO 4722 --- [restartedMain] liquibase                                : Reading from licenta.DATABASECHANGELOG
+2017-12-18 20:51:28.294  INFO 4722 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::tbl_role::abratu: Table role created
+2017-12-18 20:51:28.294  INFO 4722 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::tbl_role::abratu: ChangeSet /db/changelog/create_role.xml::tbl_role::abratu ran successfully in 32ms
+2017-12-18 20:51:28.331  INFO 4722 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::uk_role_1::abratu: Unique constraint added to role(role_name)
+2017-12-18 20:51:28.332  INFO 4722 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::uk_role_1::abratu: ChangeSet /db/changelog/create_role.xml::uk_role_1::abratu ran successfully in 31ms
+2017-12-18 20:51:28.339  INFO 4722 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::insert_admin_role::abratu: New row inserted into role
+2017-12-18 20:51:28.340  INFO 4722 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::insert_admin_role::abratu: ChangeSet /db/changelog/create_role.xml::insert_admin_role::abratu ran successfully in 4ms
+2017-12-18 20:51:28.346  INFO 4722 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::insert_user_role::abratu: New row inserted into role
+2017-12-18 20:51:28.347  INFO 4722 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::insert_user_role::abratu: ChangeSet /db/changelog/create_role.xml::insert_user_role::abratu ran successfully in 3ms
+2017-12-18 20:51:28.376  INFO 4722 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_user.xml::tbl_user::pethoalpar: Table user created
+2017-12-18 20:51:28.376  INFO 4722 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_user.xml::tbl_user::pethoalpar: ChangeSet /db/changelog/create_user.xml::tbl_user::pethoalpar ran successfully in 26ms
+2017-12-18 20:51:28.414  INFO 4722 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_user.xml::uk_user_1::pethoalpar: Unique constraint added to user(user_name)
+2017-12-18 20:51:28.415  INFO 4722 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_user.xml::uk_user_1::pethoalpar: ChangeSet /db/changelog/create_user.xml::uk_user_1::pethoalpar ran successfully in 28ms
+2017-12-18 20:51:28.471  INFO 4722 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_user.xml::fk_user_1::pethoalpar: Foreign key constraint added to user (role_id)
+2017-12-18 20:51:28.472  INFO 4722 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_user.xml::fk_user_1::pethoalpar: ChangeSet /db/changelog/create_user.xml::fk_user_1::pethoalpar ran successfully in 52ms
+2017-12-18 20:51:28.510  INFO 4722 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_product.xml::tbl_produs::abratu: Table product created
+2017-12-18 20:51:28.513  INFO 4722 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_product.xml::tbl_produs::abratu: ChangeSet /db/changelog/create_product.xml::tbl_produs::abratu ran successfully in 36ms
+2017-12-18 20:51:28.549  INFO 4722 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_product.xml::uk_code::abratu: Unique constraint added to product(code)
+2017-12-18 20:51:28.550  INFO 4722 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_product.xml::uk_code::abratu: ChangeSet /db/changelog/create_product.xml::uk_code::abratu ran successfully in 33ms
+2017-12-18 20:51:28.578 ERROR 4722 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_product.xml::fk_product_type::abratu: Change Set /db/changelog/create_product.xml::fk_product_type::abratu failed.  Error: Cannot add foreign key constraint [Failed SQL: ALTER TABLE licenta.product ADD CONSTRAINT fk_product_type FOREIGN KEY (product_type_id) REFERENCES licenta.product_type (id)]
+2017-12-18 20:51:28.581  INFO 4722 --- [restartedMain] liquibase                                : /db/changelog/create_product.xml::fk_product_type::abratu: Successfully released change log lock
+2017-12-18 20:51:28.583  WARN 4722 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set /db/changelog/create_product.xml::fk_product_type::abratu:
+     Reason: liquibase.exception.DatabaseException: Cannot add foreign key constraint [Failed SQL: ALTER TABLE licenta.product ADD CONSTRAINT fk_product_type FOREIGN KEY (product_type_id) REFERENCES licenta.product_type (id)]
+2017-12-18 20:51:28.590  INFO 4722 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2017-12-18 20:51:28.610  INFO 4722 --- [restartedMain] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-12-18 20:51:28.623 ERROR 4722 --- [restartedMain] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set /db/changelog/create_product.xml::fk_product_type::abratu:
+     Reason: liquibase.exception.DatabaseException: Cannot add foreign key constraint [Failed SQL: ALTER TABLE licenta.product ADD CONSTRAINT fk_product_type FOREIGN KEY (product_type_id) REFERENCES licenta.product_type (id)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:296) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1078) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at com.abratu.Main.main(Main.java:18) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for change set /db/changelog/create_product.xml::fk_product_type::abratu:
+     Reason: liquibase.exception.DatabaseException: Cannot add foreign key constraint [Failed SQL: ALTER TABLE licenta.product ADD CONSTRAINT fk_product_type FOREIGN KEY (product_type_id) REFERENCES licenta.product_type (id)]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:619) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:51) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:79) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:214) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:192) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:431) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:388) ~[liquibase-core-3.5.3.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624) ~[spring-beans-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	... 23 common frames omitted
+Caused by: liquibase.exception.DatabaseException: Cannot add foreign key constraint [Failed SQL: ALTER TABLE licenta.product ADD CONSTRAINT fk_product_type FOREIGN KEY (product_type_id) REFERENCES licenta.product_type (id)]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:309) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:55) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:113) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.database.AbstractJdbcDatabase.execute(AbstractJdbcDatabase.java:1277) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1259) ~[liquibase-core-3.5.3.jar:na]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:582) ~[liquibase-core-3.5.3.jar:na]
+	... 31 common frames omitted
+Caused by: java.sql.SQLException: Cannot add foreign key constraint
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2490) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2448) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.StatementImpl.executeInternal(StatementImpl.java:845) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:745) ~[mysql-connector-java-5.1.43.jar:5.1.43]
+	at sun.reflect.GeneratedMethodAccessor240.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
+	at org.apache.tomcat.jdbc.pool.StatementFacade$StatementProxy.invoke(StatementFacade.java:114) ~[tomcat-jdbc-8.5.16.jar:na]
+	at com.sun.proxy.$Proxy72.execute(Unknown Source) ~[na:na]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:307) ~[liquibase-core-3.5.3.jar:na]
+	... 36 common frames omitted
+
+2017-12-18 20:52:43.668  INFO 4727 --- [restartedMain] com.abratu.Main                          : Starting Main on 192-168-0-101.rdsnet.ro with PID 4727 (/Users/pethoalpar/Documents/work/java/LicentaServer/target/classes started by pethoalpar in /Users/pethoalpar/Documents/work/java/LicentaServer)
+2017-12-18 20:52:43.669  INFO 4727 --- [restartedMain] com.abratu.Main                          : No active profile set, falling back to default profiles: default
+2017-12-18 20:52:44.236  INFO 4727 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@47de8e74: startup date [Mon Dec 18 20:52:44 EET 2017]; root of context hierarchy
+2017-12-18 20:52:46.960  INFO 4727 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-18 20:52:46.979  INFO 4727 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-18 20:52:46.981  INFO 4727 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-12-18 20:52:47.148  INFO 4727 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-18 20:52:47.148  INFO 4727 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2916 ms
+2017-12-18 20:52:47.408  INFO 4727 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-18 20:52:47.409  INFO 4727 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-18 20:52:47.409  INFO 4727 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-18 20:52:47.410  INFO 4727 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-18 20:52:47.411  INFO 4727 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-12-18 20:52:47.411  INFO 4727 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-18 20:52:48.632  INFO 4727 --- [restartedMain] liquibase                                : Successfully acquired change log lock
+2017-12-18 20:52:49.722  INFO 4727 --- [restartedMain] liquibase                                : Creating database history table with name: licenta.DATABASECHANGELOG
+2017-12-18 20:52:49.754  INFO 4727 --- [restartedMain] liquibase                                : Reading from licenta.DATABASECHANGELOG
+2017-12-18 20:52:49.818  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::tbl_role::abratu: Table role created
+2017-12-18 20:52:49.819  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::tbl_role::abratu: ChangeSet /db/changelog/create_role.xml::tbl_role::abratu ran successfully in 31ms
+2017-12-18 20:52:49.864  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::uk_role_1::abratu: Unique constraint added to role(role_name)
+2017-12-18 20:52:49.865  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::uk_role_1::abratu: ChangeSet /db/changelog/create_role.xml::uk_role_1::abratu ran successfully in 37ms
+2017-12-18 20:52:49.879  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::insert_admin_role::abratu: New row inserted into role
+2017-12-18 20:52:49.880  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::insert_admin_role::abratu: ChangeSet /db/changelog/create_role.xml::insert_admin_role::abratu ran successfully in 7ms
+2017-12-18 20:52:49.889  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::insert_user_role::abratu: New row inserted into role
+2017-12-18 20:52:49.890  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_role.xml::insert_user_role::abratu: ChangeSet /db/changelog/create_role.xml::insert_user_role::abratu ran successfully in 3ms
+2017-12-18 20:52:49.936  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_user.xml::tbl_user::pethoalpar: Table user created
+2017-12-18 20:52:49.937  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_user.xml::tbl_user::pethoalpar: ChangeSet /db/changelog/create_user.xml::tbl_user::pethoalpar ran successfully in 36ms
+2017-12-18 20:52:49.979  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_user.xml::uk_user_1::pethoalpar: Unique constraint added to user(user_name)
+2017-12-18 20:52:49.980  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_user.xml::uk_user_1::pethoalpar: ChangeSet /db/changelog/create_user.xml::uk_user_1::pethoalpar ran successfully in 34ms
+2017-12-18 20:52:50.034  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_user.xml::fk_user_1::pethoalpar: Foreign key constraint added to user (role_id)
+2017-12-18 20:52:50.036  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_user.xml::fk_user_1::pethoalpar: ChangeSet /db/changelog/create_user.xml::fk_user_1::pethoalpar ran successfully in 48ms
+2017-12-18 20:52:50.084  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_product_type.xml::tbl_product_type::abratu: Table product_type created
+2017-12-18 20:52:50.085  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_product_type.xml::tbl_product_type::abratu: ChangeSet /db/changelog/create_product_type.xml::tbl_product_type::abratu ran successfully in 44ms
+2017-12-18 20:52:50.093  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_product_type.xml::insert_phones::abratu: New row inserted into product_type
+2017-12-18 20:52:50.094  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_product_type.xml::insert_phones::abratu: ChangeSet /db/changelog/create_product_type.xml::insert_phones::abratu ran successfully in 3ms
+2017-12-18 20:52:50.132  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_product.xml::tbl_produs::abratu: Table product created
+2017-12-18 20:52:50.133  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_product.xml::tbl_produs::abratu: ChangeSet /db/changelog/create_product.xml::tbl_produs::abratu ran successfully in 35ms
+2017-12-18 20:52:50.168  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_product.xml::uk_code::abratu: Unique constraint added to product(code)
+2017-12-18 20:52:50.168  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_product.xml::uk_code::abratu: ChangeSet /db/changelog/create_product.xml::uk_code::abratu ran successfully in 31ms
+2017-12-18 20:52:50.218  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_product.xml::fk_product_type::abratu: Foreign key constraint added to product (product_type_id)
+2017-12-18 20:52:50.219  INFO 4727 --- [restartedMain] liquibase                                : classpath:/db/changelog/db.changelog-master.xml: /db/changelog/create_product.xml::fk_product_type::abratu: ChangeSet /db/changelog/create_product.xml::fk_product_type::abratu ran successfully in 46ms
+2017-12-18 20:52:50.227  INFO 4727 --- [restartedMain] liquibase                                : Successfully released change log lock
+2017-12-18 20:52:50.461  INFO 4727 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-18 20:52:51.577  INFO 4727 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-18 20:52:52.504  INFO 4727 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@47de8e74: startup date [Mon Dec 18 20:52:44 EET 2017]; root of context hierarchy
+2017-12-18 20:52:52.617  INFO 4727 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-18 20:52:52.618  INFO 4727 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-18 20:52:52.654  INFO 4727 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-18 20:52:52.655  INFO 4727 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-18 20:52:52.707  INFO 4727 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-18 20:52:52.762  WARN 4727 --- [restartedMain] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-12-18 20:52:53.852  INFO 4727 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2017-12-18 20:52:53.955  INFO 4727 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@be2a103, org.springframework.security.web.context.SecurityContextPersistenceFilter@e9f4d0e, org.springframework.security.web.header.HeaderWriterFilter@22e386d8, org.springframework.security.web.authentication.logout.LogoutFilter@6ef1bade, com.abratu.security.JWTLoginFilter@49d26112, com.abratu.security.JWTAuthenticationFilter@655fd88b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4e8c35e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b8c5c30, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@70153daf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ab913f9, org.springframework.security.web.session.SessionManagementFilter@2427f798, org.springframework.security.web.access.ExceptionTranslationFilter@1b8f68d0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3c935fc3]
+2017-12-18 20:52:53.962  INFO 4727 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c6cf11c, org.springframework.security.web.context.SecurityContextPersistenceFilter@6bc2c792, org.springframework.security.web.header.HeaderWriterFilter@50361d37, org.springframework.security.web.authentication.logout.LogoutFilter@5401619, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@78c3af74, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55489601, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3577e63a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a022520, org.springframework.security.web.session.SessionManagementFilter@540c816c, org.springframework.security.web.access.ExceptionTranslationFilter@1934f003, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@34e32c8]
+2017-12-18 20:52:54.215  WARN 4727 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2017-12-18 20:52:54.300  INFO 4727 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-18 20:52:54.411  INFO 4727 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-18 20:52:54.419  INFO 4727 --- [restartedMain] com.abratu.Main                          : Started Main in 12.442 seconds (JVM running for 13.358)
+2017-12-18 21:27:01.185  INFO 4727 --- [Thread-8] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@47de8e74: startup date [Mon Dec 18 20:52:44 EET 2017]; root of context hierarchy
+2017-12-18 21:27:01.210  INFO 4727 --- [Thread-8] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-12-18 21:27:01.212  INFO 4727 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-12-18 21:27:08.318  INFO 4818 --- [restartedMain] com.abratu.Main                          : Starting Main on 192-168-0-101.rdsnet.ro with PID 4818 (/Users/pethoalpar/Documents/work/java/LicentaServer/target/classes started by pethoalpar in /Users/pethoalpar/Documents/work/java/LicentaServer)
+2017-12-18 21:27:08.320  INFO 4818 --- [restartedMain] com.abratu.Main                          : No active profile set, falling back to default profiles: default
+2017-12-18 21:27:08.812  INFO 4818 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7c5b63d5: startup date [Mon Dec 18 21:27:08 EET 2017]; root of context hierarchy
+2017-12-18 21:27:11.382  INFO 4818 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-18 21:27:11.401  INFO 4818 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-18 21:27:11.402  INFO 4818 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-12-18 21:27:11.526  INFO 4818 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-18 21:27:11.527  INFO 4818 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2719 ms
+2017-12-18 21:27:11.830  INFO 4818 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-18 21:27:11.831  INFO 4818 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-18 21:27:11.831  INFO 4818 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-18 21:27:11.831  INFO 4818 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-18 21:27:11.833  INFO 4818 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-12-18 21:27:11.833  INFO 4818 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-18 21:27:13.212  INFO 4818 --- [restartedMain] liquibase                                : Successfully acquired change log lock
+2017-12-18 21:27:14.627  INFO 4818 --- [restartedMain] liquibase                                : Reading from licenta.DATABASECHANGELOG
+2017-12-18 21:27:14.660  INFO 4818 --- [restartedMain] liquibase                                : Successfully released change log lock
+2017-12-18 21:27:14.808  INFO 4818 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-18 21:27:16.037  INFO 4818 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-18 21:27:16.914  INFO 4818 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7c5b63d5: startup date [Mon Dec 18 21:27:08 EET 2017]; root of context hierarchy
+2017-12-18 21:27:17.026  INFO 4818 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/product/{productCode}],methods=[GET]}" onto public java.lang.String com.abratu.controller.ProductController.getProduct(java.lang.String)
+2017-12-18 21:27:17.030  INFO 4818 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-18 21:27:17.030  INFO 4818 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-18 21:27:17.081  INFO 4818 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-18 21:27:17.081  INFO 4818 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-18 21:27:17.185  INFO 4818 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-18 21:27:17.239  WARN 4818 --- [restartedMain] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-12-18 21:27:18.134  INFO 4818 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2017-12-18 21:27:18.228  INFO 4818 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ca7afdc, org.springframework.security.web.context.SecurityContextPersistenceFilter@5f5b46c5, org.springframework.security.web.header.HeaderWriterFilter@30608f26, org.springframework.security.web.authentication.logout.LogoutFilter@157af04b, com.abratu.security.JWTLoginFilter@2bf1ec5f, com.abratu.security.JWTAuthenticationFilter@17a40692, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3b6f9fc8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@261bca35, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31a9a0e5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@424429d9, org.springframework.security.web.session.SessionManagementFilter@62d23eb1, org.springframework.security.web.access.ExceptionTranslationFilter@321a4f75, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2aaaef22]
+2017-12-18 21:27:18.233  INFO 4818 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43e50584, org.springframework.security.web.context.SecurityContextPersistenceFilter@46699b9c, org.springframework.security.web.header.HeaderWriterFilter@7a84417a, org.springframework.security.web.authentication.logout.LogoutFilter@1b713ea9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@114ee320, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d7260f8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35a573bd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ebf4885, org.springframework.security.web.session.SessionManagementFilter@1bb6b991, org.springframework.security.web.access.ExceptionTranslationFilter@57af83fa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@544cec1]
+2017-12-18 21:27:18.424  WARN 4818 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2017-12-18 21:27:18.492  INFO 4818 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-18 21:27:18.588  INFO 4818 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-18 21:27:18.596  INFO 4818 --- [restartedMain] com.abratu.Main                          : Started Main in 11.807 seconds (JVM running for 12.584)
